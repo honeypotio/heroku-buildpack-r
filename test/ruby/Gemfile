@@ -1,6 +1,13 @@
-source "http://rubygems.org"
+ruby '2.7.1'
 
+source "https://rubygems.org"
+
+git_source(:github) { |repo_name|
+  "https://github.com/#{repo_name}.git"
+}
+
+gem "bundler"
 gem "thin"
 gem "sinatra"
-gem "rinruby"
+gem "rinruby", :github => "virtualstaticvoid/rinruby", :branch => "master"
 gem "foreman", :group => :development
